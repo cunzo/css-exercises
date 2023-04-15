@@ -1,0 +1,13 @@
+.avatar.proportioned{
+    height: auto;
+    width: 300px;
+    border-style: dashed;
+    border-color: red;
+}
+
+.avatar.distorted{
+    height: 400px;
+    width: 200px;
+    border-style: dashed;
+    border-color: blue
+}
