@@ -12,7 +12,32 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: start;
 }
+
+
+.logo {
+  color: rebeccapurple;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  align-self: center;
+  padding-left: 10px;
+}
+
+.links{
+  display: flex;
+  gap: 20px;
+}
+
+.proPicNoti{
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+  padding: 4px;
+}
+
 
 .profile-image {
   background: rebeccapurple;
@@ -22,12 +47,10 @@ body {
   height: 48px;
 }
 
-.logo {
-  color: rebeccapurple;
-  font-size: 32px;
-  font-weight: 900;
-  font-style: italic;
-}
+
+
+
+
 
 button {
   border: none;
