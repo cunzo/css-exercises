@@ -4,7 +4,15 @@
 }
 
 .container {
+  height: 100VH;
   text-align: center;
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar nav"
+    "sidebar article"
+    "footer footer"
+    ;
 }
 
 .container div {
@@ -15,8 +23,27 @@
   color: white;
 }
 
+
+/* HEADER */
 .header {
+  grid-area: header;
+  text-align: left;
   background-color: #393f4d;
+  display: grid;
+  grid-template-areas: "logo menu";
+  align-items: center; /* Centra verticalmente i contenuti delle aree */
+}
+
+.menu {
+  grid-area: menu;
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.menu ul {
+  display: grid;
+  grid-auto-flow: column; /* Imposta il flusso delle colonne */
+  list-style-type: none; /* Rimuove i punti di elenco */
 }
 
 .menu ul,
@@ -24,8 +51,14 @@
   font-size: 16px;
 }
 
+
+/* SIDEBAR */
+
 .sidebar {
+  grid-area: sidebar;
   background-color: #FF7755;
+  display: grid;
+  gap: 15px;
 }
 
 .sidebar .photo {
@@ -36,7 +69,6 @@
   border-radius: 10px;
 }
 
-
 .sidebar .side-content {
   background-color: white;
   color: black;
@@ -44,36 +76,50 @@
   font-weight: normal;
 }
 
+.side-content,
+.photo {
+  display: grid;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra orizzontalmente */
+}
+
+
+/* NAV */
 .nav {
+  grid-area: nav;
+  display: grid;
   background-color: #FF7755;
 }
 
+.nav ul {
+  display: grid;
+  grid-auto-flow: column; /* Imposta il flusso delle colonne */
+  list-style-type: none; /* Rimuove i punti di elenco */
+}
+
 .nav ul li {
-  font-size: 16px;
+  font-size: 16px ;
   text-transform: uppercase;
 }
 
-.article {
-  background-color: #bccbde;
-}
 
-.article p {
-  font-size: 18px;
-  font-family: sans-serif;
-  color: white;
-  text-align: left;
+/* ARTICLE */
+.article {
+  grid-area: article;
+  background-color: #bccbde;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .article .card {
   background-color: #FFFFFF;
   color: black;
   text-align: center;
-}
-
-.card p {
-  color: black;
-  font-weight: normal;
-  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 9fr;
 }
 
 .card .title {
@@ -81,7 +127,16 @@
   text-align: center;
 }
 
+.card p {
+  color: black;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* FOOTER */
 .footer {
+  grid-area: footer;
   background-color: #393f4d;
 }
 
